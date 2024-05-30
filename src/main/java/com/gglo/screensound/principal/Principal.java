@@ -51,6 +51,11 @@ public class Principal {
         }
     }
 
+    private void buscarMusicasPorArtista() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'buscarMusicasPorArtista'");
+    }
+
     private void pesquisarDadosDoArtista() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'pesquisarDadosDoArtista'");
