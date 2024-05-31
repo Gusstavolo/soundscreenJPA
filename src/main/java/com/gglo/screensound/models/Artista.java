@@ -10,10 +10,11 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Artistas")
+@Table(name = "artistas")
 public class Artista {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,8 +28,8 @@ public class Artista {
     private TipoArtista tipo;
 
     
-
-    private List<Musicas> musicas = new ArrayList<>();
+    @OneToMany(mappedBy = "artista")
+    private List<Musica> musicas = new ArrayList<>();
 
 
 
@@ -68,13 +69,13 @@ public class Artista {
 
 
 
-    public List<Musicas> getMusicas() {
+    public List<Musica> getMusicas() {
         return musicas;
     }
 
 
 
-    public void setMusicas(List<Musicas> musicas) {
+    public void setMusicas(List<Musica> musicas) {
         this.musicas = musicas;
     }
 
